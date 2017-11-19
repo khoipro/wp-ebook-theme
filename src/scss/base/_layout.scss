@@ -1,0 +1,58 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	@extend .flex-column;
+	background: #eaeef3;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 0 auto;
+	position: relative;
+	padding-top: 60px;
+	@media (min-width: $break-m) {
+		padding: 0;
+	}
+}
+
+.sidebar {
+	width: 100%;
+	@media (min-width: $break-m) {
+		width: 240px;
+	}
+}
+
+.section {
+	@extend .flex-column;
+	width: 100%;
+	@media (min-width: $break-m) {
+		width: calc(100% - 240px);
+	}
+}
+
+.section__inner {
+	flex: 1 0 auto;
+}
+
+.sidebar__inner,
+.content__inner {
+	padding: 20px;
+}
+
+// Custom layout
+
+.box {
+	padding: 0;
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	@media (min-width: $break-m) {
+		padding: 20px;
+	}
+}
+
+.box-title {
+	@extend .title;
+	margin-bottom: 15px;
+}

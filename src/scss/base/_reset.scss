@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button,
+input[type="submit"],
+.button {
+	cursor: pointer;
+}
+
+button,
+input[type="submit"],
+.button,
+textarea,
+input,
+select {
+	&:focus {
+		outline: 0;
+	}
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

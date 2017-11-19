@@ -1,0 +1,46 @@
+.fade-in {
+	opacity: 1;
+	visibility: visible;
+}
+
+.fade-out {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.trans-all {
+	transition: all .3s ease;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.bg-cover {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.absolute-full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin ratio($w: 1, $h: 1, $type: before) {
+	&:#{$type} {
+		content: '';
+		padding-top: percentage($h / $w);
+		display: block;
+	}
+}

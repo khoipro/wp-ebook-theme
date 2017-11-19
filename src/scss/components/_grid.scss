@@ -1,0 +1,24 @@
+.grid {
+	@extend .box;
+	flex: 1 0 auto;
+}
+
+.grid__inner {
+	padding: 20px 10px;
+	@media (min-width: $break-m) {
+		padding: 0;
+	}
+}
+
+.grid__headline {
+	@extend .box-title;
+}
+
+.grid__list {
+	@extend .section__content;
+	@media (min-width: $break-s) {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px;
+	}
+}

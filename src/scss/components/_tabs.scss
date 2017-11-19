@@ -1,0 +1,50 @@
+.tabs {
+
+}
+
+.tab-header {
+	// margin-bottom: 25px;
+}
+
+.tab-header__list {
+	display: flex;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.tab-header__item {
+	position: relative;
+	padding: 10px 25px;
+	color: $c-dblue;
+	cursor: pointer;
+	&.active {
+		border-top: 1px solid rgba(0,0,0,.5);
+		border-left: 1px solid rgba(0,0,0,.5);
+		border-right: 1px solid rgba(0,0,0,.5);
+		border-bottom-color: $c-white;
+		background: $c-white;
+		&:after {
+			content: '';
+			width: 100%;
+			height: 1px;
+			background: $c-white;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+		}
+	}
+}
+
+.tab-content {
+	padding: 20px;
+	background: $c-white;
+}
+
+.tab-content__item {
+	@extend .fade-out;
+	height: 0;
+	transition: opacity .3s ease;
+	&.active {
+		@extend .fade-in;
+		height: auto;
+	}
+}

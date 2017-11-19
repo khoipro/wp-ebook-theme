@@ -1,0 +1,61 @@
+.article {
+	flex: 1 0 auto;
+	@media (min-width: $break-m) {
+		padding: 40px;
+	}
+}
+
+.article__inner {
+	@media (min-width: $break-m) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.article__thumbnail {
+	width: 100%;
+	max-width: 250px;
+	margin: 20px auto;
+	text-align: center;
+	@media (min-width: $break-m) {
+		max-width: 300px;
+	}
+	@media (min-width: $break-l) {
+		max-width: 250px;
+		margin: 0 20px 0 0;
+	}
+}
+
+.article__header {
+	text-align: center;
+}
+
+.article__headline {
+	@extend .main-heading;
+	margin-bottom: 5px;
+}
+
+.article__author {
+	margin-bottom: 15px;
+}
+
+.article__image {
+	max-width: 100%;
+}
+
+.article__content {
+	padding: 20px;
+	background: $c-white;
+	@media (min-width: $break-m) {
+		flex: 1 1 0;
+	}
+}
+
+.article__intro {
+	p {
+		margin-bottom: 0.5em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.download-link__link {
+	margin-bottom: 5px;
+	padding: 10px 25px;
+}
+
+.download-link__text {
+	@extend .small;
+	color: $c-gray;
+}

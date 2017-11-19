@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600&subset=vietnamese');
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: $f-sans;
+	font-size: 100%;
+	line-height: 1.3;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-family: $f-sans;
+	font-weight: 400;
+}
+
+a:hover {
+	@extend .trans-all;
+}
+
+// Sidebar
+
+.headline {
+	font-size: 1rem;
+	line-height: 1.3;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.nav-title {
+	font-size: 0.6875rem;
+	line-height: 1.3;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.main-heading {
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.title {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.large {
+	font-size: 1.15rem;
+	line-height: 1.5;
+}
+
+.small {
+	font-size: 0.85rem;
+	line-height: 1.5;
+}
+
+.wysiwyg {
+	h4 {
+		@extend .main-heading;
+		margin-bottom: 15px;
+	}
+	p {
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	ul {
+		list-style: disc;
+		margin-left: 1.2em;
+		margin-bottom: 15px;
+		li {
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	a {
+		color: $c-dblue;
+		text-decoration: underline;
+	}
+}
+
+/*
+Button
+ */
+
+input[type="submit"],
+.button {
+	@extend .trans-all;
+	@extend .nav-title;
+	display: inline-block;
+	padding: 10px 25px;
+	background: $c-dblue;
+	color: $c-white;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	&:hover {
+		background: darken($c-dblue, 10%);
+		border-color: darken($c-dblue, 10%);
+	}
+}
+
+/*
+Custom text
+ */
+
+.error {
+	@extend .small;
+	display: inline-block;
+	padding: 5px 10px;
+	background: rgba(#dd1155, 0.2);
+	color: #dd1155;
+}
+
+.message-box {
+	margin: 10px 0;
+	padding: 15px;
+	border: 1px solid transparent;
+}
+
+.message-success {
+	border-color: #2c662d;
+	background: #fcfff5;
+	color: #2c662d;
+}
+
+.message-error {
+	border-color: #912d2b;
+	background: #fff6f6;
+	color: #912d2b;
+}

@@ -1,0 +1,11 @@
+.archive {
+	flex: 1 0 auto;
+}
+
+.archive__header {
+	margin-bottom: 15px;
+}
+
+.archive__headline {
+	@extend .main-heading;
+}

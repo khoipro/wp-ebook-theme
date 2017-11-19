@@ -1,0 +1,57 @@
+.widget {
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	&:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+.widget__info {
+	margin: 10px 0;
+	padding: 5px 8px;
+	border: 1px solid $c-gray;
+}
+
+.widget__title {
+	@extend .nav-title;
+	margin-bottom: 5px;
+}
+
+.widget__list-item {
+	display: block;
+}
+
+.widget a,
+.widget__list-link {
+	position: relative;
+	display: block;
+	padding: 8px 0;
+	color: rgba(255,255,255,.5);
+	&:hover {
+		color: $c-white;
+	}
+}
+
+.widget p,
+.widget label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.widget p,
+.widget .widget__info {
+	@extend .small;
+}
+
+.widget p:last-child {
+	margin-bottom: 0;
+}
+
+.widget input[type="submit"] {
+	background: $c-white;
+	color: $c-dblue;
+	border: 0;
+}
