@@ -56,4 +56,8 @@ function kindle_get_file_type_name($value) {
     }
 }
 
+function kindlefan_setup() {
+    add_theme_support('title-tag');
+}
+add_action('init', 'kindlefan_setup');
 
