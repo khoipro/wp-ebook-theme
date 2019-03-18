@@ -2,7 +2,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <strong><?php bloginfo('name'); ?></strong></span>
+            <span><?php printf('Copyright &copy; <strong>%s</strong>. All right reserved.', get_bloginfo('name')); ?></span>
         </div>
     </div>
 </footer>
