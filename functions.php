@@ -54,6 +54,8 @@ function kindle_get_file_type_name($value) {
     if (!empty($results) ) {
         return $results[0]['name'];
     }
+
+    return false;
 }
 
 function kindlefan_setup() {
@@ -61,3 +63,10 @@ function kindlefan_setup() {
 }
 add_action('init', 'kindlefan_setup');
 
+
+function kindlefan_homepage_post_query( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->query_vars['post_type'] = 'ebook';
+    }
+}
+add_action( 'pre_get_posts', 'kindlefan_homepage_post_query' );
