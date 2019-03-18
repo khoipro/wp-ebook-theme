@@ -10,6 +10,8 @@
             </div>
             <div class="modal-body">
                 <form id="brokenEbookReport">
+                    <?php $current_obj = get_queried_object(); ?>
+                    <input type="hidden" name="postID" value="<?php echo $current_obj->ID; ?>" />
                     <?php
                     $report_types = array(
                         array(
@@ -31,8 +33,9 @@
                     );
                     ?>
                     <div class="form-group">
-                        <label for="type"><?php _e('Report Type', 'kindlefan'); ?></label>
-                        <div class="form-check">
+                        <label for="type" class="mb-1"><?php _e('Report Types', 'kindlefan'); ?>*</label>
+                        <p class="mb-2"><small><?php _e('You can select multiple.', 'kindlefan'); ?></small></p>
+                        <div class="form-check pl-0">
                             <select class="custom-select" id="type" required multiple>
                                 <?php foreach($report_types as $key => $type) : ?>
                                     <option value="<?php echo $type['value']; ?>" <?php selected($key === 0); ?>><?php echo $type['name']; ?></option>
@@ -41,7 +44,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message"><?php _e('Message', 'kindlefan'); ?></label>
+                        <label for="message" class="mb-1"><?php _e('Message', 'kindlefan'); ?></label>
                         <p class="mb-2"><small><?php _e('If you wish to provide more detail, please leave it here.', 'kindlefan'); ?></small></p>
                         <textarea class="form-control" id="message" rows="5"></textarea>
                     </div>
