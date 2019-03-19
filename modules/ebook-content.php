@@ -38,7 +38,7 @@ $file_type_name = kindle_get_file_type_name($file_type);
     <?php endif; ?>
 </div>
 <div class="row">
-    <div class="col-lg-4 col-sm-6 col-xs-12">
+    <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card mb-4 border-left-primary">
             <div class="card-body">
                 <?php if( !empty($download_link) ) : ?>
@@ -70,7 +70,7 @@ $file_type_name = kindle_get_file_type_name($file_type);
             </div>
         </div>
     </div>
-    <div class="col-lg-8 col-sm-6 col-xs-12">
+    <div class="col-lg-8 col-md-6 col-sm-12">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary"><?php _e('Description', 'kindlefan'); ?></h6>
