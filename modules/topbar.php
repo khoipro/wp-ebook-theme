@@ -11,7 +11,7 @@
         <div class="input-group">
             <input name="s" id="s" type="text" class="form-control bg-light border-0 small" placeholder="<?php _e('Enter your book name', 'kindlefan'); ?>" aria-label="Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">
+                <button class="btn btn-primary" type="submit" aria-label="<?php _e('Search button', 'kindlefan'); ?>">
                     <i class="fas fa-search fa-sm"></i>
                 </button>
             </div>
@@ -28,11 +28,11 @@
             </a>
             <!-- Dropdown - Messages -->
             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
+                <form class="form-inline mr-auto w-100 navbar-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                        <input type="text" name="s" id="s" class="form-control bg-light border-0 small" placeholder="<?php _e('Enter a book name', 'kindlefan'); ?>" aria-label="<?php _e('Search', 'kindlefan'); ?>" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
+                            <button class="btn btn-primary" type="button" aria-label="<?php _e('Search button', 'kindlefan'); ?>">
                                 <i class="fas fa-search fa-sm"></i>
                             </button>
                         </div>
