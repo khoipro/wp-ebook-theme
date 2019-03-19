@@ -46,4 +46,21 @@
     e.preventDefault();
   });
 
+  var $submitEbookForm = $('#submitEbook');
+
+  if ($submitEbookForm.length) {
+      $submitEbookForm.on('submit', function(e) {
+          e.preventDefault();
+          var $form = $(this);
+
+          $.ajax({
+              url: wpObj.ajaxUrl,
+              data: $form.serialize(),
+              method: $form.attr('method'),
+              success : function( response ){ console.log(response) },
+              error : function(error){ console.log(error) }
+          });
+      });
+  }
+
 })(jQuery); // End of use strict
